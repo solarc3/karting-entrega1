@@ -1,0 +1,61 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+# Archivos de variables de entorno
+.env*
+.env.dev
+.env.prod
+.env.local
+
+# Directorios específicos de IDE
+.idea/
+.settings/
+
+# Logs
+logs/
+*.log
+
+# Directorios de sistema operativo
+.DS_Store
+Thumbs.db
+
+# Dependencias de Node (para frontend)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Archivos generados por la compilación
+dist/
+# Datos persistentes
+deployment/backend/data/
