@@ -2,8 +2,8 @@
 
 Detalles:
 
-- Coneccion entre microservicios exclusivamente mediante y hacia el api-gateway
-- frontend tambien es un pod clusterip (solo coneccion interna), se uso tambien la redireccion desde el api-gateway, asi se evita tener 2 load balancers y 2 ips externas, toda logica de comunicacion se centraliza en el api-gateway, toda la config del api-gateway esta dentro del [configmap](https://github.com/solarc3/tingeso-1-25/blob/main/Evaluacion%202/helm-chart/templates/namespace-configmap.yaml) 
+- conexion entre microservicios exclusivamente mediante y hacia el api-gateway
+- frontend tambien es un pod clusterip (solo conexion interna), se uso tambien la redireccion desde el api-gateway, asi se evita tener 2 load balancers y 2 ips externas, toda logica de comunicacion se centraliza en el api-gateway, toda la config del api-gateway esta dentro del [configmap](https://github.com/solarc3/tingeso-1-25/blob/main/Evaluacion%202/helm-chart/templates/namespace-configmap.yaml) 
 - Se hace ingress con la ip publica que tiene asignada el api-gateway, al ser load balancer puede esperar trafico externo
 - Para construir las imagenes se utiliza google cloud build, este requiere un archivo especial, en cada microservicio existe un `cloudbuild.yaml`, que compila con recursos de google y luego pushea hacia el `Google Artifact Registry`
 - En vez de usar dockerhub, se prefirio utilizar el `Artifact Registry` de google, solamente por curioso y probar cosas nuevas, requiere configurar la cuenta de servicio que tiene el cluster de kubernetes y darle permisos a esa cuenta tambien
